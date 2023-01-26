@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Print Best School except for 9
+
+number=0
+while [ $number -le 9 ]
+do
+	if [ $number -eq 9 ]
+	then
+		echo "Hi"
+	fi
+	echo "Best School"
+	((number++))
+done
