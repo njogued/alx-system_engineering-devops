@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Use for loop to display contents of a directory
+
+ls > lst
+list=lst
+
+for n in $list
+do
+	cut -d "-" -f 2 "$n"
+	echo "$n"
+done
