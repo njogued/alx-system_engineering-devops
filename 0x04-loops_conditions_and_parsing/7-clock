@@ -4,14 +4,14 @@
 time=0
 hour=0
 min=0
-while [ $time -le 720 ]
+while [ $time -le 779 ]
 do
 	if [ $(( time % 60 )) -ne 0 ]
 	then
 		((min=time%60))
 		echo "$min"
 	else
-		echo "Hours: $hour"
+		echo "Hour: $hour"
 		((hour++))
 	fi
 	((time++))
