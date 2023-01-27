@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Show the running processes
+# Show the running processes with bash
 
-ps -ufx
+ps -ufx | grep bash
