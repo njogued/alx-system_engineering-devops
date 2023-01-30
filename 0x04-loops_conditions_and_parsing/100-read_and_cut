@@ -2,7 +2,7 @@
 # Reading file contents
 
 file='/etc/passwd'
-while read line
+while read -r line
 do
-	echo $line
-done < file
+	echo "$line"
+done < $file
