@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Display IPs
+
+ifconfig -a | grep "inet " | sed -e 's/^[[:space:]]*//' | cut -d " " -f 2
