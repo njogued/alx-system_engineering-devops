@@ -2,7 +2,7 @@
 # checks the ping of an IP
 
 ip=$1
-if [ $# -eq 0 ]
+if [ $# -ne 1 ]
 then
 	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 else
