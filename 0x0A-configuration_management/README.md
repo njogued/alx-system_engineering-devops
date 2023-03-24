@@ -9,9 +9,21 @@ Benefits include:
  - Version control for the server environment
 ```
 ### Puppet
-Puppet has a master-slave architecture  
+Puppet has a master-slave architecture.  
 The Puppet agent sends ```Facts``` to the Puppet Master and the Puppet Master sends a ```Catalogue``` that defines the configuration settings. The Puppet Slave sends back a ```Report``` to indicate that the settings have been implemented.  
 Puppet Master and Puppet Slave communicate through a secured SSL.  
+
+Install puppet
+```
+$ apt-get install -y ruby=1:2.7+1 --allow-downgrades
+$ apt-get install -y ruby-augeas
+$ apt-get install -y ruby-shadow
+$ apt-get install -y puppet
+```
+Install puppet-lint
+```
+$ gem install puppet-lint
+```
 
 ### Task 0. Create a file
 Using Puppet, create a file in /tmp.
