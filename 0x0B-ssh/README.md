@@ -37,7 +37,7 @@ Host remote_alias
 #### Get user info
 - run command: ```id user```
   
-### Make user su
+#### Make user su
 - run command: ```usermod -aG sudo user```
 
 ### Task 0. Use a private key
