@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-# Create a redirect_me to youtube
+#Editing the default config file
 
-sed -i.bak '/server_name _;/a\\n\tlocation \/redirect_me \{\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t\}' /etc/nginx/sites-available/default
-
-# restart the server
+sudo sed -i '/server_name _;/a \	location /redirect_me {\n		return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n	}' /etc/nginx/sites-available/default
 sudo service nginx restart
