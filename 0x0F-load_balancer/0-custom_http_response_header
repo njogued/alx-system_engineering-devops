@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Configure the HTTP response to show the custom header on the web-servers
+
+# Update packages
+sudo apt-get update
+
+# Install nginx
+sudo apt-get install nginx -y
+
+# Create a hello world page
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+# Create a redirection
+sudo sed -i '/server_name _;/a \	location /redirect_me {\n		return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n	}' /etc/nginx/sites-available/default
+
+# Custom 404 page
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
+
+# Use the custom 404 page
+sudo sed -i '/server_name _;/a \        error_page 404 /custom_404.html;\n        location = /custom_404.html {\n                internal;\n        }' /etc/nginx/sites-available/default
+
+# To use the custom 404 page
+sudo sed -i "/^http {/a \        add_header X-Served-By $hostname;" /etc/nginx/nginx.conf
+
+sudo service nginx restart
