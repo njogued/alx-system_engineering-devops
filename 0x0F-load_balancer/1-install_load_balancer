@@ -6,11 +6,12 @@ sudo apt-get install haproxy -y
 
 # Loadbalancer configuration
 sudo tee -a /etc/haproxy/haproxy.cfg > /dev/null <<EOT
-frontend myfront
+frontend myfrontend
         bind *:80
         default_backend myservers
 
-backend myback
+
+backend myservers
         balance roundrobin
         server web-01 54.236.33.171:80 check
         server web-02 54.90.8.140:80 check
