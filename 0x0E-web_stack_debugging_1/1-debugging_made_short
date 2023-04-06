@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Debugging nginx web server not listening to port 80 by connecting config files
+sudo service nginx status
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+pkill -o nginx
