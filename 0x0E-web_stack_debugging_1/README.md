@@ -5,13 +5,13 @@
 - ```/var/log``` with ```tail -f``` checks the logs.  
 - ```curl``` checks if one can connect to the HTTP port from the location.  
 
-[Resouce - First 5 Commands When I Connect on a Linux Server](https://www.linux.com/training-tutorials/first-5-commands-when-i-connect-linux-server/)  
+[Resource - First 5 Commands When I Connect on a Linux Server](https://www.linux.com/training-tutorials/first-5-commands-when-i-connect-linux-server/)  
 <ol>
-<li><strong>w<\strong> - Displays info such as the server uptime, the users on the server and the load average</li>
-<li><strong>history<\strong> - Displays the previous commands run by the user</li>
-<li><strong>top<\strong> - Displays all running processes and infor such as CPU, memory utilization and Time.</li>
-<li><strong>df<\strong> - with flag h, df displays the disk space</li>
-<li><strong>netstat<\strong> - with flags lp, netstat displays the port and IP that the server is listening on.</li>
+<li>w - Displays info such as the server uptime, the users on the server and the load average</li>
+<li>history - Displays the previous commands run by the user</li>
+<li>top - Displays all running processes and infor such as CPU, memory utilization and Time.</li>
+<li>df - with flag h, df displays the disk space</li>
+<li>netstat - with flags lp, netstat displays the port and IP that the server is listening on.</li>
 </ol>
   
 #### Machine-level debugging
