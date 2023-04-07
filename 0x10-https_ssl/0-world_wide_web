@@ -15,4 +15,7 @@ elif [ $# == 2 ]
 then
     sd=$2
     all_subs "$1" "$sd"
+elif [ $# == 0 ]
+then
+    echo "Usage: ./0-world_wide_web <domain> <subdomain>"
 fi
