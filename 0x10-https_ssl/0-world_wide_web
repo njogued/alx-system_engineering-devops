@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# A bash script that lists subdomains
+
+all_subs () {
+    dig "$2"."$1" | awk '/ANSWER SECTION/ {getline; print "The subdomain '"$2"' is an A record that points to " $5}'
+}
+
+if [ $# -lt 2 ]
+then
+    dig www."$1" | awk '/ANSWER SECTION/ {getline; print "The subdomain www is an A record that points to " $5}'
+    all_subs "$1" "lb-01"
+    all_subs "$1" "web-01"
+    all_subs "$1" "web-02"
+elif [ $# == 2 ]
+then
+    sd=$2
+    dig "$2"."$1" | awk '/ANSWER SECTION/ {getline; print "The subdomain '"$sd"' is an A record that points to " $5}'
+fi
