@@ -36,6 +36,7 @@ frontend myfront
 	bind :80
         bind *:443 ssl crt /etc/haproxy/certs/www.njogued.tech.pem
 	mode http
+	http-request redirect scheme https code 301 unless { ssl_fc }
         default_backend myback
 
 backend myback
