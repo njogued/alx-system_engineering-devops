@@ -2,7 +2,7 @@
 # A bash script that lists subdomains
 
 all_subs () {
-    dig "$2"."$1" | awk '/ANSWER SECTION/ {getline; print "The subdomain '"$2"' is an A record that points to " $5}'
+    dig "$2"."$1" | awk '/ANSWER SECTION/ {getline; print "The subdomain '"$2"' is an A record and points to " $5}'
 }
 
 if [ $# -lt 2 ]
