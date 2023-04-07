@@ -5,6 +5,9 @@
 [Why SSL?](https://www.sslshopper.com/why-ssl-the-purpose-of-using-ssl-certificates.html)  
 [SSL Termination](https://en.wikipedia.org/wiki/TLS_termination_proxy)  
 [Using functions in bash](https://tldp.org/LDP/abs/html/complexfunct.html)  
+  
+[Installing Certbot](https://www.digitalocean.com/community/tutorials/how-to-use-certbot-standalone-mode-to-retrieve-let-s-encrypt-ssl-certificates-on-ubuntu-20-04) - Installing certbot  
+[Configuring HAProxy with SSL Certification](https://www.digitalocean.com/community/tutorials/how-to-secure-haproxy-with-let-s-encrypt-on-ubuntu-14-04) - Use step #2  
 
 #### HTTP vs HTTPS
 - HTTPS uses either SSL (Secure Sockets Layer) or TLS (Transport Layer Security) to encrypt communications. 
