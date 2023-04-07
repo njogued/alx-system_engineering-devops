@@ -6,7 +6,7 @@
 - HTTP Requests
 - Log files on Linux
 
-###Task 0. Transfer a file to your server
+### Task 0. Transfer a file to your server
 - Write a Bash script that transfers a file from our client to a server:
 ```
 Requirements:
