@@ -1,7 +1,8 @@
 ### 0x13. Firewall
   
 #### Resource(s)
-[Resource - ufw commands on ubuntu](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
+[Resource - ufw commands on ubuntu](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)  
+[Resource -Firewall port forwarding](https://www.baeldung.com/linux/ufw-port-forward)  
   
 #### Configuring a Firewall on Ubuntu
 - One may install UFW using the commands ```sudo apt-get update``` then ```sudo apt-get install -y ufw```. ```allow``` and ```deny``` commands permit or deny traffic. 
@@ -31,3 +32,11 @@ Requirements:
 	 80 (HTTP)
 ```
 - Share the ufw commands that you used in your answer file
+
+#### Task 1. Port forwarding
+- Firewalls can not only filter requests, they can also forward them.
+```
+Requirements:
+	 -Configure web-01 so that its firewall redirects port 8080/TCP to port 80/TCP.
+```
+- Your answer file should be a copy of the ufw configuration file that you modified to make this happen
