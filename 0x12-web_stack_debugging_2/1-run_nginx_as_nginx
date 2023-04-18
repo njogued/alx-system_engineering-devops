@@ -21,4 +21,4 @@ chmod 644 /etc/nginx/nginx.conf
 sudo nginx -t
 
 #Start the nginx webserver
-sudo service nginx start
+sudo -u nginx service nginx start
