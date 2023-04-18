@@ -18,4 +18,4 @@ sudo sed -i 's/#user www-data;/user nginx;/' /etc/nginx/nginx.conf
 sudo nginx -t
 
 #Start the nginx webserver
-sudo service nginx start
+sudo -u nginx service nginx start
