@@ -1,24 +1,7 @@
 #!/usr/bin/env bash
-# the script makes nginx listen on port 8080
-
-# Stop nginx
-sudo service nginx stop
-
-# Kill apache. service apache2 stop does not kill all processes
+# Debug in 7 lines
 sudo pkill apache2
-
-# Make nginx listen on port 8080
-sudo sed -i 's/listen \[::\]:80 default_server ipv6only=on;/listen [::]:8080 default_server ipv6only=on;/' /etc/nginx/sites-available/default
-sudo sed -i 's/listen 80 default_server;/listen 8080 default_server;/' /etc/nginx/sites-available/default
-
-# Change the user running webserver
+sudo sed -i 's/80/8080/' /etc/nginx/sites-available/default
 sudo sed -i 's/#user www-data;/user nginx;/' /etc/nginx/nginx.conf
-
-# Update permissions to allow nginx user to run conf file
 chmod 644 /etc/nginx/nginx.conf
-
-#Check if the config is okay
-sudo nginx -t
-
-#Start the nginx webserver
 sudo -u nginx service nginx start
