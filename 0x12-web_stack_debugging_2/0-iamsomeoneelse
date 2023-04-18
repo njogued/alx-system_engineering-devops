@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script runs whoami on a user
+
+sudo -u $1 whoami
