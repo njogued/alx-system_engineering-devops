@@ -12,7 +12,7 @@ sudo sed -i 's/listen \[::\]:80 default_server ipv6only=on;/listen [::]:8080 def
 sudo sed -i 's/listen 80 default_server;/listen 8080 default_server;/' /etc/nginx/sites-available/default
 
 # Change the user running webserver
-sudo sed -i 's/#user www-data/user nginx;/' /etc/nginx/nginx.conf
+sudo sed -i 's/#user www-data;/user nginx;/' /etc/nginx/nginx.conf
 
 #Check if the config is okay
 sudo nginx -t
