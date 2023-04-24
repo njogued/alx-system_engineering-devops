@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-"""Using an api to get json data
-Uses the requests module"""
-
 from requests import get
 from sys import argv as v
+
+
+"""
+from requests import get
+from sys import argv as v
+Using an api to get json data
+Uses the requests module
+"""
 
 
 if __name__ == "__main__":
