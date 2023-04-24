@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"""Using an api to get json data"""
+"""Using an api to get json data
+Uses the requests module"""
 
-from sys import argv as v
 from requests import get
+from sys import argv as v
+
 
 if __name__ == "__main__":
     usr = v[1]
@@ -17,7 +19,7 @@ if __name__ == "__main__":
     for tasks in todos:
         if tasks["userId"] == usr:
             total += 1
-        if tasks["userId"] == usr and tasks["completed"] == True:
+        if tasks["userId"] == usr and tasks["completed"] is True:
             completed += 1
             complete_tasks.append(tasks["title"])
 
