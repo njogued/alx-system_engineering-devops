@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Save the tasks in a CSV file"""
+"""Save the tasks in a json file"""
 
-import csv
+import json
 from requests import get
 from sys import argv as v
 
@@ -11,16 +11,20 @@ if __name__ == "__main__":
     todos = get("https://jsonplaceholder.typicode.com/todos").json()
     username = usrs["username"]
     all_tasks = []
-    file_name = f"{usr}.csv"
+    file_name = f"{usr}.json"
 
     for tasks in todos:
         if tasks["userId"] == int(usr):
             status = tasks["completed"]
             task = tasks["title"]
-            full = f'"{usr}","{username}","{status}","{task}"\n'
-            all_tasks.append(full)
+            tasks_dict = {}
+            tasks_dict["task"] = task
+            tasks_dict["completed"] = status
+            tasks_dict["username"] = username
+            all_tasks.append(tasks_dict)
 
     with open(file_name, 'w') as f:
-        for usr_task in all_tasks:
-            f.write(usr_task)
+        json_dict = {}
+        json_dict[usr] = all_tasks
+        json.dump(json_dict, f)
             
