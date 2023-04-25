@@ -9,7 +9,7 @@ from requests import get
 
 
 if __name__ == "__main__":
-    usrs = get(f"https://jsonplaceholder.typicode.com/users/").json()
+    usrs = get("https://jsonplaceholder.typicode.com/users/").json()
     ids = {}
     for user in usrs:
         ids[user["id"]] = user["username"]
