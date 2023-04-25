@@ -30,4 +30,4 @@ if __name__ == "__main__":
 
     with open(file_name, 'w') as f:
         for usr_task in all_tasks:
-            f.write(usr_task)            
+            f.write(usr_task)
