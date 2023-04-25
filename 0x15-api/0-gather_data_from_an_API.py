@@ -12,7 +12,7 @@ if __name__ == "__main__":
     usr = v[1]
 
     # Generate the URL for the user info based on user input
-    usrurl = f"https://jsonplaceholder.typicode.com/users/{usr}"
+    usrurl = "https://jsonplaceholder.typicode.com/users/{}".format(usr)
 
     # Fetch the todos data from the API and parse it as JSON
     todos = get("https://jsonplaceholder.typicode.com/todos").json()
@@ -42,6 +42,6 @@ if __name__ == "__main__":
             complete_tasks.append(tasks["title"])
 
     # Print a summary of the completed tasks for the user
-    print(f"Employee {usr_name} is done with tasks({completed}/{total}):")
+    print("Employee {} is done with tasks({}/{}):".format(usr_name, completed, total))
     for task in complete_tasks:
-        print(f"\t{task}")
+        print("\t {}".format(task))
