@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Save all user tasks in a json file"""
+
+"""
+Save all user tasks in a json file
+"""
 
 import json
 from requests import get
